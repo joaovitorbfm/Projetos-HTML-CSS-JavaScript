@@ -112,6 +112,10 @@ body {
   transition: 0.2s ease;
 }
 
+.sidebar-links li a i {
+  font-size: 1.2rem;
+}
+
 .sidebar-links li a:hover {
   background: #fff;
   color: #161a2d;
@@ -130,16 +134,15 @@ body {
   color: #fff;
 }
 
-.user-profile img {
-  width: 42px;
-  height: 42px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid transparent;
+.user-profile i {
+  font-size: 2.5rem;
+  color: #dbd4e3;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.sidebar:hover .user-profile img {
-  border-color: #fff;
+.sidebar:hover .user-profile i {
+  opacity: 1;
 }
 
 .user-detail {
