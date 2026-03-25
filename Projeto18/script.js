@@ -8,10 +8,10 @@ icon.onclick = function() {
     // Verifica se a música está pausada
     if (mySong.paused) {
         mySong.play(); // Toca a música
-        icon.src = "img/play.png"; // Altera a imagem para o ícone de "Pause"
+        icon.src = "img/pause.png"; // Altera a imagem para o ícone de "Pause"
     } else {
         mySong.pause(); // Pausa a música
-        icon.src = "img/pause.png"; // Altera a imagem para o ícone de "Play"
+        icon.src = "img/play.png"; // Altera a imagem para o ícone de "Play"
     }
 }
 
