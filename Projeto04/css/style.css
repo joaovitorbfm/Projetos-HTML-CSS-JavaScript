@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100-vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #121212; /* Fundo escuro */
+}
+
+.container {
+    perspective: 1000px;
+}
+
+.card {
+    width: 400px;
+    height: 240px;
+    cursor: pointer;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Efeito de virar o cartão ao passar o mouse */
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 25px;
+    color: #fff;
+    background: linear-gradient(135deg, #232526, #414345);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.back {
+    transform: rotateY(180deg);
+    padding: 0;
+}
+
+/* Detalhes da Frente */
+.chip { width: 50px; }
+
+.card-no {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+
+.card-holder {
+    margin-top: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.valid-thru {
+    position: absolute;
+    right: 25px;
+    bottom: 65px;
+    text-align: right;
+}
+
+.label { font-size: 10px; display: block; }
+
+.logo {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+}
+
+/* Detalhes do Verso */
+.bar {
+    background: #000;
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.cvv-section {
+    padding: 20px;
+}
+
+.cvv-bar {
+    background: #fff;
+    color: #000;
+    text-align: right;
+    padding: 5px 10px;
+    font-style: italic;
+    font-weight: 600;
+    border-radius: 4px;
+}

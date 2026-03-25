@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #111; /* Fundo escuro */
+}
+
+.skills-container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skills-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.skill-box {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.skill-box .title {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Fundo da barra (a parte cinza vazia) */
+.skill-bar {
+    height: 12px;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 6px;
+    position: relative;
+}
+
+/* A barra colorida que vai encher */
+.skill-per {
+    position: absolute;
+    height: 100%;
+    border-radius: 6px;
+    background: #4070f4; /* Azul vibrante */
+    /* A animação chama-se 'fillBars' e dura 1.5s */
+    animation: fillBars 1.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+/* Larguras específicas para cada competência */
+.html-css { width: 90%; }
+.javascript { width: 75%; }
+.react { width: 85%; }
+.python { width: 60%; }
+
+/* Estilo do balão indicando a percentagem */
+.tooltip {
+    position: absolute;
+    right: -15px;
+    top: -30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: #4070f4;
+    padding: 3px 8px;
+    border-radius: 4px;
+    opacity: 0; /* Começa invisível */
+    animation: showTooltip 0.5s 1.5s forwards; /* Aparece depois da barra encher */
+}
+
+/* O pequeno triângulo em baixo do balão */
+.tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    height: 8px;
+    width: 8px;
+    background: #4070f4;
+}
+
+/* Keyframes para a animação de preenchimento da barra */
+@keyframes fillBars {
+    0% { width: 0; }
+    /* O 100% não tem largura definida para respeitar a largura das classes (.html-css, etc) */
+}
+
+/* Keyframes para o tooltip aparecer suavemente */
+@keyframes showTooltip {
+    0% { opacity: 0; top: -40px; }
+    100% { opacity: 1; top: -30px; }
+}

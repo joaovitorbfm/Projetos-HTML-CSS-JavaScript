@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #dde1e7; /* Cor base para o efeito Neumorphism */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+nav {
+  width: 90%;
+  background: #dde1e7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 80px;
+  border-radius: 10px;
+  /* Sombras Neumórficas: uma clara e uma escura */
+  box-shadow: -3px -3px 7px #ffffff73,
+               3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+
+nav .logo {
+  color: #4a4a4a;
+  font-size: 33px;
+  font-weight: 600;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Efeito de botão pressionado (Inset) */
+nav ul li a:hover,
+nav ul li a.active {
+  color: #3498db;
+  box-shadow: inset -2px -2px 5px #ffffff73,
+              inset  2px  2px 5px rgba(94, 104, 121, 0.288);
+}
+
+nav .menu-btn i {
+  color: #4a4a4a;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Responsividade (Mobile) */
+@media (max-width: 944px) {
+  nav {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 860px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d"; /* Ícone de fechar (X) */
+  }
+  nav ul {
+    position: absolute;
+    top: 100px;
+    left: -100%;
+    background: #dde1e7;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: -3px -3px 7px #ffffff73,
+                 3px 3px 5px rgba(94, 104, 121, 0.288);
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    margin: 40px 0;
+  }
+  nav ul li a {
+    font-size: 20px;
+    display: block;
+  }
+}

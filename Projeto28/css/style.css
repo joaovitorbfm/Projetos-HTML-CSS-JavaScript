@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(147deg, #f6b323 0%, #f23b26 74%);
+}
+
+.container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container .title {
+    font-size: 45px;
+    font-weight: 600;
+    color: #333;
+}
+
+.container p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #f23b26; /* Cor base da barra */
+    border-radius: 5px;
+    list-style: none;
+}
+
+.pagination li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fdfdfd;
+    height: 50px;
+    width: 50px; /* Botões numéricos quadrados */
+    font-size: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-right-width: 0px;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.35), 
+                inset 0px -1px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Ajustando o Botão "Previous" */
+.pagination li:first-child a {
+    width: 120px;
+    border-radius: 5px 0 0 5px;
+}
+.pagination li:first-child a i {
+    margin-right: 8px;
+}
+
+/* Ajustando o Botão "Next" */
+.pagination li:last-child a {
+    width: 120px;
+    border-right-width: 1px; /* Devolvemos a borda direita só no último item */
+    border-radius: 0 5px 5px 0;
+}
+.pagination li:last-child a i {
+    margin-left: 8px;
+}
+
+/* Efeito Hover e Estado Ativo (Página atual) */
+.pagination li a:hover,
+.pagination li a.active {
+    background: rgba(0, 0, 0, 0.15); /* Escurece levemente o fundo vermelho */
+    border-top-color: rgba(0, 0, 0, 0.35);
+    border-bottom-color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnQwYWhmaTBmMjlxa2o4bzk0czkydzM5OHZ5NDFvczUxdDJ3dHdoNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OK5LK5zLFfdm/giphy.gif);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+    position: relative;
+}
+
+.navbar {
+    width: 88%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 140px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    box-sizing: border-box;
+}
+
+.left-col h1 {
+    font-size: 90px;
+    line-height: 110px;
+}
+
+.right-col {
+    display: flex;
+    align-items: center;
+}
+
+.right-col p {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+#icon {
+    width: 80px;
+    cursor: pointer;
+}
+/* Remove o estilo padrão do navegador */
+.apple-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 4px; /* Barra bem fininha estilo iOS */
+    background: rgba(255, 255, 255, 0.3); /* Fundo translúcido */
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Estiliza a "bolinha" (Thumb) no Chrome/Safari/Edge */
+.apple-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: none;
+}
+
+/* Estiliza a "bolinha" (Thumb) no Firefox */
+.apple-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+/* Efeito ao passar o mouse */
+.apple-slider:hover {
+    background: rgba(255, 255, 255, 0.5);
+}

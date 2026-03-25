@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Um gradiente vibrante ajuda a destacar o efeito de vidro */
+    background: url(../img/bc.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 370px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.15); /* Fundo semi-transparente */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda subtil */
+    backdrop-filter: blur(15px); /* Efeito de vidro fosco */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    text-align: center;
+}
+
+.header {
+    font-size: 33px;
+    font-weight: 600;
+    color: #191919;
+    margin-bottom: 30px;
+}
+
+.input-field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.input-field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+    padding: 0 15px 0 45px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #191919;
+    transition: all 0.3s ease;
+}
+
+.input-field input::placeholder {
+    color: rgba(26, 23, 23, 0.8);
+}
+
+.input-field input:focus {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.input-field i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #191919;
+    font-size: 18px;
+}
+
+.forgot {
+    text-align: left;
+    margin: 10px 0 20px 5px;
+}
+
+.forgot a, .signup a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forgot a:hover, .signup a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(0.98);
+}
+
+.signup {
+    margin-top: 25px;
+    color: #fff;
+    font-size: 15px;
+}

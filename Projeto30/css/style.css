@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #d2d2d2; /* Cor de fundo da página principal */
+}
+
+/* Estilos principais do Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 85px; /* Largura inicial (recolhida) */
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Esconde o texto vazado */
+  background: #161a2d; /* Cor escura do menu */
+  padding: 25px 20px;
+  transition: all 0.4s ease;
+}
+
+/* Expande o Sidebar ao passar o mouse */
+.sidebar:hover {
+  width: 260px;
+}
+
+/* Cabeçalho (Logo) */
+.sidebar .sidebar-header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .sidebar-header img {
+  width: 42px;
+  border-radius: 50%;
+}
+
+.sidebar .sidebar-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 23px;
+}
+
+/* Lista de Links */
+.sidebar-links {
+  list-style: none;
+  margin-top: 20px;
+  height: 80%;
+  overflow-y: auto;
+  scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+}
+.sidebar-links::-webkit-scrollbar {
+  display: none; /* Esconde a barra de rolagem no Chrome/Safari */
+}
+
+/* Títulos das Categorias */
+.sidebar-links h4 {
+  color: #fff;
+  font-weight: 500;
+  margin: 10px 0;
+  white-space: nowrap; /* Impede que o texto quebre linha */
+  position: relative;
+}
+
+.sidebar-links h4 span {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .sidebar-links h4 span {
+  opacity: 1;
+}
+
+/* Linha separadora quando o menu está recolhido */
+.sidebar-links .menu-separator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #333578;
+  transform: translateY(-50%);
+  transform-origin: right;
+  transition-delay: 0.2s;
+}
+
+.sidebar:hover .sidebar-links .menu-separator {
+  transform: scaleX(0); /* Faz a linha sumir animada quando expande */
+  transition-delay: 0s;
+}
+
+/* Links */
+.sidebar-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  color: #dbd4e3;
+  font-weight: 500;
+  padding: 15px 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+
+.sidebar-links li a:hover {
+  background: #fff;
+  color: #161a2d;
+}
+
+/* Perfil do Usuário */
+.user-account {
+  margin-top: auto; /* Empurra para o final (rodapé) */
+  padding: 12px 10px;
+  margin-left: -10px;
+}
+
+.user-account .user-profile {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.user-profile img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.sidebar:hover .user-profile img {
+  border-color: #fff;
+}
+
+.user-detail {
+  margin-left: 23px;
+  white-space: nowrap;
+}
+
+.user-detail h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.user-detail span {
+  font-size: 0.775rem;
+  font-weight: 500;
+}

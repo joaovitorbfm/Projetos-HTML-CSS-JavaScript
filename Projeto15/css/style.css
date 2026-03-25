@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #111; /* Fundo escuro para destacar o brilho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.btn {
+    position: relative;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    border-radius: 10px;
+    text-decoration: none;
+    overflow: hidden; /* Corta o que sair do botão */
+}
+
+/* O gradiente colorido que vai girar */
+.btn::before {
+    content: '';
+    position: absolute;
+    width: 550px;
+    height: 500%; /* Bem alto para cobrir tudo ao girar */
+    background: linear-gradient(#00ccff, #f109f1); /* Cores vibrantes para o gradiente */
+    border-radius: 50%; /* Deixa o gradiente circular */
+    transition: 0.5s;
+    animation: rotate 2s linear infinite; /* Gira continuamente */
+    /* Escondido por padrão, aparece no hover se desejar, ou gira fixo */
+    opacity: 0; /* Ajuste a opacidade para um brilho mais sutil */
+}
+
+/* Mostra a borda colorida no hover */
+.btn:hover::before {
+    opacity: 1;
+}
+
+/* Camada interna para criar o efeito de "borda" */
+.btn span {
+    position: absolute;
+    inset: 4px; /* Cria o espaço da borda (4px) */
+    background: #111;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    z-index: 1; /* Garante que o texto fique acima do gradiente */
+}
+
+/* Animação de rotação */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efeito de brilho externo */
+.btn:hover {
+    box-shadow: 0 0 20px rgba(0, 204, 255, 0.6);
+}

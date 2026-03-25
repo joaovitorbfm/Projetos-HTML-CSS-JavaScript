@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #7d2ae8; /* Cor roxa vibrante */
+}
+
+.wrapper {
+    width: 450px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px 30px 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.wrapper .content header {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.wrapper .content p {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.wrapper form {
+    margin: 25px 0 20px;
+}
+
+/* Estilo dos campos de entrada */
+.wrapper form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+}
+
+.wrapper form .field i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+}
+
+.wrapper form .field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 45px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input:focus {
+    border-color: #7d2ae8;
+}
+
+/* Botão de Subscrição */
+.wrapper form .field input[type="submit"] {
+    padding-left: 0;
+    background: #7d2ae8;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.wrapper form .field input[type="submit"]:hover {
+    background: #6610f2;
+}
+
+.wrapper .text {
+    font-size: 13px;
+    color: #666;
+}

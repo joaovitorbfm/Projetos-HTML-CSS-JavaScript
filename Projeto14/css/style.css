@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #fdda0d; /* Fundo amarelo vibrante */
+}
+
+.wrapper {
+    background: #fff;
+    width: 400px;
+    padding: 30px 30px 35px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+
+.wrapper input {
+    display: none; /* Esconde os rádio botões originais */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer {
+    height: 135px;
+    width: 135px;
+    overflow: hidden;
+}
+
+.outer .emojis {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.outer .emojis li {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+.outer .emojis li img {
+    height: 135px;
+    width: 135px;
+}
+
+/* Lógica de deslizamento dos emojis */
+#star-1:checked ~ .content .emojis { margin-left: 0; }
+#star-2:checked ~ .content .emojis { margin-left: -135px; }
+#star-3:checked ~ .content .emojis { margin-left: -270px; }
+#star-4:checked ~ .content .emojis { margin-left: -405px; }
+#star-5:checked ~ .content .emojis { margin-left: -540px; }
+
+.stars {
+    margin-top: 30px;
+}
+
+.stars label {
+    font-size: 30px;
+    margin: 0 3px;
+    color: #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Colorir as estrelas baseado na seleção */
+#star-1:checked ~ .content .stars .star-1,
+#star-2:checked ~ .content .stars .star-1, #star-2:checked ~ .content .stars .star-2,
+#star-3:checked ~ .content .stars .star-1, #star-3:checked ~ .content .stars .star-2, #star-3:checked ~ .content .stars .star-3,
+#star-4:checked ~ .content .stars .star-1, #star-4:checked ~ .content .stars .star-2, #star-4:checked ~ .content .stars .star-3, #star-4:checked ~ .content .stars .star-4,
+#star-5:checked ~ .content .stars .star-1, #star-5:checked ~ .content .stars .star-2, #star-5:checked ~ .content .stars .star-3, #star-5:checked ~ .content .stars .star-4, #star-5:checked ~ .content .stars .star-5 {
+    color: #fdda0d;
+    text-shadow: 0 0 10px #fec503;
+}
+
+/* Footer com o texto dinâmico (opcional com pseudo-elements) */
+.footer .text::before {
+    content: "Avalie-nos";
+    font-size: 22px;
+    font-weight: 500;
+    color: #333;
+}
+
+#star-1:checked ~ .footer .text::before { content: "Odiei"; color: #e74c3c; }
+#star-2:checked ~ .footer .text::before { content: "Não gostei"; color: #e67e22; }
+#star-3:checked ~ .footer .text::before { content: "Razoável"; color: #f1c40f; }
+#star-4:checked ~ .footer .text::before { content: "Gostei"; color: #2ecc71; }
+#star-5:checked ~ .footer .text::before { content: "Adorei!"; color: #1abc9c; }

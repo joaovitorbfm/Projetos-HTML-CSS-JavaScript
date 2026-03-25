@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website com Imagens Dinâmicas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="hero">
+    <div class="container">
+        <nav>
+            <img src="img/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Explorar</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+            <button type="button">Contatos</button>
+        </nav>
+
+        <div class="info">
+            <h1>VIAJE PELO MUNDO</h1>
+            <p>Descubra destinos incríveis com imagens que ganham vida. <br> Navegue pela galeria abaixo para mudar o cenário.</p>
+            <input type="text" placeholder="Procure seu destino...">
+        </div>
+
+        <div class="slider">
+            <img src="img/left-arrow.png" id="back">
+            <div class="preview">
+                <img src="img/bg1.png" class="thumbnail active">
+                <img src="img/bg2.png" class="thumbnail">
+                <img src="img/bg3.png" class="thumbnail">
+                <img src="img/bg4.png" class="thumbnail">
+                <img src="img/bg5.png" class="thumbnail">
+            </div>
+            <img src="img/right-arrow.png" id="next">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

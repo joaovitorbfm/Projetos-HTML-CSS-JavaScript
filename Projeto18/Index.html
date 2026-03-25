@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website Design</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="img/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="left-col">
+                <h1>O SOM<br>REAL</h1>
+            </div>
+          <div class="right-col">
+    <p>Clique aqui para ouvir</p>
+    <img src="img/Play.png" id="icon"> <input type="range" id="volumeSlider" class="apple-slider" min="0" max="1" step="0.01" value="1">
+</div>
+        </div>
+    </div>
+
+    <audio id="mySong">
+        <source src="media/Denon Reed - Let Him Go - Denon Reed (youtube).mp3" type="audio/mp3">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>

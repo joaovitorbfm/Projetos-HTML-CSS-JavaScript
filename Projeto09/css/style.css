@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    margin-top: 150px;
+    font-family: 'Arial', sans-serif;
+    font-size: 150px;
+    color: transparent;
+    background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnh1M2k2cGp3MDdyYTV5NG9lejVweHdscW5hd2VqcXhnZThzcHBzeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YqhIK6Gbor6CLeloBq/giphy.gif);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-repeat: repeat;
+}
+.vi {
+    text-align: center;
+    margin-top: 150px;
+    font-family: 'Arial', sans-serif;
+    font-size: 150px;
+    color: transparent;
+    background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDQzNmV6amk1cHVjdXpyeXkwczFidDkzenc3YzQ3a3hiaDZ4OXZ0OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TTWnfO964s245vzY4e/giphy.gif);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-repeat: repeat;
+}
+.bi {
+    text-align: center;
+    margin-top: 150px;
+    font-family: 'Arial', sans-serif;
+    font-size: 150px;
+    color: transparent;
+    background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRqMzZwM3Z2c3RpMWthbzVmZWY2ODBwNXNjcHlobGI1dGxlNjR6ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/326d5iOUoYY8N6uFPm/giphy.gif);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-repeat: repeat;
+}
+.fr {
+    text-align: center;
+    margin-top: 150px;
+    font-family: 'Arial', sans-serif;
+    font-size: 150px;
+    color: transparent;
+    background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGFzZjZmZTMzZWswZmMwNnJyYWdzdnhiMDM4dWFibTJ4OHQxMHhqbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/a3IGFA4BKrE40/giphy.gif);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-repeat: repeat;
+}
+.mo {
+    text-align: center;
+    margin-top: 150px;
+    font-family: 'Arial', sans-serif;
+    font-size: 150px;
+    color: transparent;
+    background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG90bWxxaTNubXA1MzMzcXR4ZzF2cGk5d2w5eDM3ODlzZ3A1ZnA4dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U3qYN8S0j3bpK/giphy.gif);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-repeat: repeat;
+}

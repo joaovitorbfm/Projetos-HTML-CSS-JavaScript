@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/pic.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+}
+
+#drone-box {
+    width: 200px;
+    margin: 150px auto;
+    position: relative;
+    /* Transição suave para o movimento seguir o rato */
+    transition: transform 2s; 
+}
+
+.drone-pic {
+    width: 100%;
+}
+
+.left-pic, .right-pic {
+    width: 80px;
+    position: absolute;
+    top: 0;
+    /* Animação de rotação contínua */
+    animation: rotation 0.2s linear infinite;
+}
+
+.left-pic {
+    left: -11px;
+}
+
+.right-pic {
+    right: -11px;
+}
+
+/* Keyframes para a rotação das hélices */
+@keyframes rotation {
+    100% {
+        transform: rotateY(360deg);
+    }
+}

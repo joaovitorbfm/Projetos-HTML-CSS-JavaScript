@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000; /* Fundo preto para destacar o vermelho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    padding: 10px; /* Esse padding evita que o botão esmague o input */
+}
+
+input {
+    height: 60px;
+    width: 0; /* Começa totalmente oculto */
+    outline: none;
+    padding: 0;
+    color: #111;
+    font-size: 20px;
+    border: 1px solid #D50000;
+    border-radius: 50px;
+    background: #fff;
+    /* A transição suave de 0.7 segundos */
+    transition: all 0.7s ease;
+}
+
+::placeholder {
+    color: grey;
+}
+
+.btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #D50000;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* Centraliza o ícone dentro do círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn i {
+    font-size: 25px;
+    color: white;
+    transition: all 0.7s ease;
+}
+
+/* * Lógica do Hover: 
+ * Ao passar o mouse no container, o input expande de 0 para 350px 
+ */
+.container:hover input {
+    width: 350px;
+    padding: 0 20px; /* Adiciona respiro ao texto digitado */
+}
+
+/* O ícone dá uma volta completa anti-horária durante a expansão */
+.container:hover i {
+    transform: rotate(-360deg);
+}

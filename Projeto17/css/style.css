@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000; /* Fundo escuro */
+    color: #fff;
+}
+
+.services {
+    margin: 90px 0;
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.services p {
+    margin-bottom: 50px;
+    color: #ccc;
+}
+
+/* Estilo do Card (Box) */
+.service-box {
+    background: #111;
+    padding: 30px;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.5s;
+    text-align: left;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Ícones principais */
+.service-box .fa {
+    font-size: 40px;
+    margin-bottom: 20px;
+    /* Aplicando Gradiente ao Ícone */
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.service-box h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #bbb;
+    margin-bottom: 25px;
+}
+
+/* Efeito de Gradiente nos Spans */
+span {
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Botão de Seta (Posição Absoluta) */
+.service-box a {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(221, 36, 118, 0.4);
+}
+
+.service-box a .fa {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 0;
+    background: none;
+    -webkit-text-fill-color: #fff;
+}

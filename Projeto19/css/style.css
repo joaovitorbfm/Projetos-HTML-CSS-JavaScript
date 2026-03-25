@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #111; /* Fundo escuro para destacar os ícones */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.list-item {
+    margin: 0 10px;
+    position: relative;
+}
+
+.list-item a {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.list-item:hover a {
+    color: #4070f4; /* Cor azul ao hover */
+}
+
+/* Estilização do Tooltip */
+.tooltip {
+    position: absolute;
+    top: -20px; /* Posição inicial (escondido) */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4070f4;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Triângulo abaixo do tooltip */
+.tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10px;
+    width: 10px;
+    background: #4070f4;
+    rotate: 45deg;
+}
+
+/* Efeito de Hover */
+.list-item:hover .tooltip {
+    top: -60px; /* Move para cima */
+    opacity: 1;
+    visibility: visible;
+}
